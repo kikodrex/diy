@@ -1,24 +1,23 @@
-function openModal(qrImage, product) {
-  document.getElementById("qrImage").src = qrImage;
+function openModal(qrCode) {
+  document.getElementById("qrImage").src = qrCode;
   document.getElementById("orderModal").style.display = "block";
 }
+
 function closeModal() {
   document.getElementById("orderModal").style.display = "none";
 }
 
 // Countdown Timer
-let countDownDate = new Date().getTime() + 2 * 24 * 60 * 60 * 1000; // 2 days
-let timer = setInterval(() => {
-  let now = new Date().getTime();
-  let distance = countDownDate - now;
+const countdownDate = new Date().getTime() + 86400000; // 24 hrs from now
+const x = setInterval(function () {
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
+  const hrs = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("timer").innerHTML = hrs + "h " + mins + "m " + secs + "s ";
   if (distance < 0) {
-    clearInterval(timer);
-    document.getElementById("timer").innerHTML = "Promo ended";
-    return;
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
   }
-  let d = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let s = Math.floor((distance % (1000 * 60)) / 1000);
-  document.getElementById("timer").innerHTML = `${d}d ${h}h ${m}m ${s}s`;
 }, 1000);
