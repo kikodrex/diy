@@ -1,117 +1,114 @@
-* {
-  box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f9fc;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background: #f8f9fa;
-  padding: 20px;
-  color: #333;
 }
 
 header {
   text-align: center;
-  margin-bottom: 30px;
+  background: #007bff;
+  color: white;
+  padding: 20px;
 }
 
-.carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-  border-radius: 10px;
+#countdown {
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-.carousel-track {
+.product-list {
   display: flex;
-  transition: transform 0.5s ease;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.carousel-track img {
-  width: 100%;
-  flex-shrink: 0;
+.product {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-align: center;
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  background: rgba(0,0,0,0.5);
+.product button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #28a745;
   color: white;
   border: none;
-  padding: 10px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-.instructions, .order-form, .payment-section {
-  background: white;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.instructions h2, .order-form h2, .payment-section h2 {
-  color: #007bff;
-  margin-bottom: 15px;
-}
-
-.instructions ol {
-  padding-left: 20px;
-}
-
-.instructions li {
-  margin-bottom: 10px;
-}
-
-form input, form button {
-  display: block;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
   width: 100%;
-  margin-bottom: 15px;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.qr {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input[type="text"],
+form input[type="file"] {
   padding: 10px;
   font-size: 16px;
 }
 
 form button {
-  background: #28a745;
+  background: #007bff;
   color: white;
+  padding: 12px;
   border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-form button:hover {
-  background: #218838;
-}
-
-.payment-section {
-  background: #fff3cd;
-  border-left: 5px solid #ffc107;
-  text-align: center;
-}
-
-.qr-code {
-  width: 180px;
-  margin: 15px auto;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 .note {
+  margin-top: 10px;
   font-size: 14px;
   color: #555;
+  text-align: center;
 }
