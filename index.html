@@ -2,52 +2,67 @@
 <html lang="tl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Emergency Light Order</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Portable Charger</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
-    <h1>🔋 Emergency Light Sale</h1>
-    <p>Cash on Delivery Nationwide 📦</p>
-    <p>+ Shipping fee sa price ng item</p>
-    <div id="countdown">Sale ends in: <span id="timer">00:00:00</span></div>
+    <h1>🔥 SALE! Portable Charger Kits</h1>
+    <p class="countdown">Promo ends in: <span id="timer"></span></p>
+    <p>📍Cash On Delivery Nationwide — may 30% shipping discount sa higit 1 order!</p>
   </header>
 
-  <section class="product-list">
-    <div class="product">
-      <h3>✅ Type-C Charger Port – ₱699</h3>
-      <button onclick="openModal('Type-C Charger Port', 'qr1.png')">Order Now</button>
+  <section class="products">
+    <div class="card">
+      <img src="IMG_7927.jpeg" alt="Type-C Charger Port" />
+      <h2>₱699 - Type-C Charger Port</h2>
+      <button onclick="openModal('IMG_7927.jpeg', 'Type-C Charger Port - ₱699')">Order Now</button>
     </div>
-
-    <div class="product">
-      <h3>✅ Type-C + Solar Charger – ₱799</h3>
-      <button onclick="openModal('Type-C + Solar Charger', 'qr2.png')">Order Now</button>
+    <div class="card">
+      <img src="IMG_7928.jpeg" alt="Type-C + Solar Charger Port" />
+      <h2>₱799 - Type-C + Solar Charger Port</h2>
+      <button onclick="openModal('IMG_7928.jpeg', 'Type-C + Solar Charger Port - ₱799')">Order Now</button>
     </div>
-
-    <div class="product">
-      <h3>✅ DIY Kit Only – ₱599</h3>
-      <button onclick="openModal('DIY Kit Only', 'qr3.png')">Order Now</button>
+    <div class="card">
+      <img src="IMG_7926.jpeg" alt="DIY Kit Only" />
+      <h2>₱599 - DIY Kit Only</h2>
+      <button onclick="openModal('IMG_7926.jpeg', 'DIY Kit Only - ₱599')">Order Now</button>
     </div>
   </section>
 
-  <div id="orderModal" class="modal">
+  <section class="reviews">
+    <h2>⭐⭐⭐⭐⭐ Mga Satisfied Customer</h2>
+    <ul>
+      <li>“Sulit na sulit! Ginamit namin sa baha. – *Jen, Quezon City*”</li>
+      <li>“Dumating agad, gumagana nang maayos. – *Mark, Cebu City*”</li>
+      <li>“Napaka-handy at tibay! – *Liza, Davao*”</li>
+      <li>“Legit to, perfect sa brownout. – *Tony, Batangas*”</li>
+      <li>“Sobrang dali i-install, thank you seller! – *Kaye, Iloilo*”</li>
+    </ul>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="orderModal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
-      <h2>📌 Kumpletuhin ang Iyong Order</h2>
-      <p>I-scan ang QR code sa ibaba para magbayad via GCash:</p>
-      <img id="qrImage" src="" alt="GCash QR Code" class="qr" />
-
-      <form onsubmit="submitOrder(event)">
-        <input type="text" placeholder="Buong Pangalan" required />
-        <input type="text" placeholder="Kumpletong Address" required />
-        <input type="text" placeholder="Mobile Number" required />
-        <input type="file" accept="image/*" required />
-        <button type="submit">I-submit ang Order</button>
+      <h2>Mag-order Ngayon</h2>
+      <img id="qrImage" src="" alt="QR Code" />
+      <p>I-scan ang QR code sa itaas at bayaran ang produkto.</p>
+      <form action="mailto:fmarual@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Buong Pangalan:</label>
+        <input type="text" name="Full Name" required />
+        <label for="address">Kumpletong Address:</label>
+        <input type="text" name="Complete Address" required />
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" name="Mobile Number" required />
+        <p class="note">📌 Kung higit sa isang order, pakipindot muli ang “Order Now.”</p>
+        <p class="note">📦 Ipapadala via J&T pagkatapos ng bayad at screenshot ng GCash!</p>
+        <label>Attach Payment Screenshot:</label>
+        <input type="file" name="Screenshot" accept="image/*" required />
+        <input type="submit" value="Submit Order" />
       </form>
-
-      <p class="note">📌 Reminder: Kung higit sa isang order, ulitin ang proseso.</p>
-      <p class="note">📦 Ipapadala via J&T Courier pagkatapos ng kumpirmadong bayad.</p>
     </div>
   </div>
 
