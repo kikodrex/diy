@@ -2,69 +2,78 @@
 <html lang="tl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Order Portable Charger</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Now | Power Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header>
-    <h1>🔥 SALE! Portable Charger Kits</h1>
-    <p class="countdown">Promo ends in: <span id="timer"></span></p>
-    <p>📍Cash On Delivery Nationwide — may 30% shipping discount sa higit 1 order!</p>
+    <h1>📍️READY TO USE!</h1>
+    <p>✅ Type-C Charger Port – ₱699<br>
+       ✅ Type-C + Solar Charger Port – ₱799<br>
+       ✅ DIY Kit Only – ₱599</p>
+    <p>Cash On Delivery Nationwide ‼️<br>+ Shipping fee sa price ng item!<br><strong>30% shipping discount</strong> kung higit sa 1 order!</p>
+    <div id="countdown">SALE ENDS IN: <span id="timer"></span></div>
   </header>
 
-  <section class="products">
-    <div class="card">
-      <img src="IMG_7927.jpeg" alt="Type-C Charger Port" />
-      <h2>₱699 - Type-C Charger Port</h2>
-      <button onclick="openModal('IMG_7927.jpeg', 'Type-C Charger Port - ₱699')">Order Now</button>
-    </div>
-    <div class="card">
-      <img src="IMG_7928.jpeg" alt="Type-C + Solar Charger Port" />
-      <h2>₱799 - Type-C + Solar Charger Port</h2>
-      <button onclick="openModal('IMG_7928.jpeg', 'Type-C + Solar Charger Port - ₱799')">Order Now</button>
-    </div>
-    <div class="card">
-      <img src="IMG_7926.jpeg" alt="DIY Kit Only" />
-      <h2>₱599 - DIY Kit Only</h2>
-      <button onclick="openModal('IMG_7926.jpeg', 'DIY Kit Only - ₱599')">Order Now</button>
-    </div>
-  </section>
+  <main>
+    <div class="products">
+      <!-- Product 1 -->
+      <div class="card">
+        <img src="IMG_7913.jpeg" alt="Type-C Charger Port">
+        <h2>₱699 - Type-C Charger Port</h2>
+        <button onclick="openModal('IMG_7927.jpeg')">Order Now</button>
+      </div>
 
-  <section class="reviews">
-    <h2>⭐⭐⭐⭐⭐ Mga Satisfied Customer</h2>
-    <ul>
-      <li>“Sulit na sulit! Ginamit namin sa baha. – *Jen, Quezon City*”</li>
-      <li>“Dumating agad, gumagana nang maayos. – *Mark, Cebu City*”</li>
-      <li>“Napaka-handy at tibay! – *Liza, Davao*”</li>
-      <li>“Legit to, perfect sa brownout. – *Tony, Batangas*”</li>
-      <li>“Sobrang dali i-install, thank you seller! – *Kaye, Iloilo*”</li>
-    </ul>
-  </section>
+      <!-- Product 2 -->
+      <div class="card">
+        <img src="IMG_7913.jpeg" alt="Type-C + Solar Charger Port">
+        <h2>₱799 - Type-C + Solar Charger Port</h2>
+        <button onclick="openModal('IMG_7928.jpeg')">Order Now</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="card">
+        <img src="IMG_7913.jpeg" alt="DIY Kit Only">
+        <h2>₱599 - DIY Kit Only</h2>
+        <button onclick="openModal('IMG_7926.jpeg')">Order Now</button>
+      </div>
+    </div>
+  </main>
 
   <!-- Modal -->
-  <div class="modal" id="orderModal">
+  <div id="orderModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Mag-order Ngayon</h2>
-      <img id="qrImage" src="" alt="QR Code" />
-      <p>I-scan ang QR code sa itaas at bayaran ang produkto.</p>
+      <h2>I-scan ang QR Code para magbayad</h2>
+      <img id="qrImage" src="" alt="GCash QR" />
       <form action="mailto:fmarual@gmail.com" method="POST" enctype="text/plain">
-        <label for="name">Buong Pangalan:</label>
+        <label>Buong Pangalan:</label>
         <input type="text" name="Full Name" required />
-        <label for="address">Kumpletong Address:</label>
-        <input type="text" name="Complete Address" required />
-        <label for="mobile">Mobile Number:</label>
+        <label>Kumpletong Address:</label>
+        <input type="text" name="Address" required />
+        <label>Mobile Number:</label>
         <input type="text" name="Mobile Number" required />
-        <p class="note">📌 Kung higit sa isang order, pakipindot muli ang “Order Now.”</p>
-        <p class="note">📦 Ipapadala via J&T pagkatapos ng bayad at screenshot ng GCash!</p>
-        <label>Attach Payment Screenshot:</label>
-        <input type="file" name="Screenshot" accept="image/*" required />
-        <input type="submit" value="Submit Order" />
+        <p><strong>📸 I-send ang screenshot ng GCash payment sa email: fmarual@gmail.com</strong></p>
+        <p><em>Kung higit sa isang item ang o-orderin, pakisunod muli ang proseso.</em></p>
+        <p><strong>📦 Ipapadala via J&T Courier pagkatapos ng bayad.</strong></p>
+        <button type="submit">Kumpirmahin ang Order</button>
       </form>
     </div>
   </div>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <h3>Mga Review ⭐⭐⭐⭐⭐</h3>
+    <ul>
+      <li>“Sobrang sulit! Dumating agad sa Cavite. Legit seller!” – Maria, Cavite</li>
+      <li>“Ginamit ko sa baha, ang tibay. May power kahit brownout!” – Jun, Bulacan</li>
+      <li>“Maganda ang kalidad, mabilis ang delivery sa Cebu.” – Rhea, Cebu</li>
+      <li>“Nakatipid ako dahil sa discount, sulit sa price!” – Arvin, Davao</li>
+      <li>“Maganda ang response ng seller, very accommodating.” – Ella, Iloilo</li>
+    </ul>
+  </section>
 
   <script src="script.js"></script>
 </body>
