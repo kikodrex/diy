@@ -3,35 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portable Emergency Light</title>
+  <title>Emergency Light Order Page</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🔦 Portable Emergency Light</h1>
-    <p class="subtitle">Compact. Powerful. Ready for Anything.</p>
 
-    <div class="carousel">
-      <div class="carousel-track">
-        <img src="images/image1.jpg" alt="Complete Emergency Light" />
-        <img src="images/image2.jpg" alt="Internal Components" />
-      </div>
-      <button class="carousel-btn prev">&#10094;</button>
-      <button class="carousel-btn next">&#10095;</button>
+  <header>
+    <h1>🔥 Portable Emergency Light</h1>
+    <p>Perfect for floods, typhoons & brownouts.</p>
+  </header>
+
+  <section class="carousel">
+    <div class="carousel-track">
+      <img src="images/0DDD99F9.jpeg" alt="Light 1" />
+      <img src="images/67B74FB2.jpeg" alt="Light 2" />
     </div>
+    <button class="carousel-btn prev">❮</button>
+    <button class="carousel-btn next">❯</button>
+  </section>
 
-    <section class="instructions">
-      <h2>📌 Hook-up Technique</h2>
-      <ol>
-        <li>Connect the battery (18650 cell) to the charging module (red board).</li>
-        <li>Attach the boost converter to power the bulb from 3.7V to 5V/12V.</li>
-        <li>Use the switch to control power flow to the LED bulb.</li>
-        <li>Secure the wiring inside the container to avoid loose connections.</li>
-        <li>Test the emergency light by toggling the switch after charging.</li>
-      </ol>
-      <p><strong>Tip:</strong> Use hot glue or foam pads to protect internal circuits from shaking.</p>
-    </section>
-  </div>
+  <section class="instructions">
+    <h2>⚡ Why Buy This?</h2>
+    <ol>
+      <li>Up to 10 hours emergency light</li>
+      <li>Can be used during power outages & floods</li>
+      <li>Portable & Rechargeable</li>
+    </ol>
+  </section>
+
+  <section class="order-form">
+    <h2>🛒 Order Now</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="text" placeholder="Shipping Address" required />
+      <input type="number" placeholder="Quantity" min="1" required />
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <section class="payment-section">
+    <h2>💳 Pay via GCash</h2>
+    <p>After submitting your order, please send payment via GCash to the number below:</p>
+    <div class="gcash-details">
+      <p><strong>GCash Number:</strong> 0992 916 2001</p>
+      <img src="images/gcash-qr-placeholder.png" alt="GCash QR Code" class="qr-code">
+      <p class="note">Send a screenshot of your payment to our Facebook page or email after ordering.</p>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
